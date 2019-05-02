@@ -1,0 +1,74 @@
+This file describes the run time analysis (Worst Case Big O Notation) for each solution.
+
+Assumption:
+- The run time complexity for reading the file into the list was excluded
+- The analysis only focus on the implementation to complete the tasks
+
+Task0:
+
+The run time complexity is to retrieve the first and last record from 2 different lists. Both are of O(1).
+
+As a result, the run time complexity is O(1).
+
+
+Task1:
+
+The main elementary operations of the algorithm were list below:
+1. For each line in calls and texts, get the phone numbers and insert into a set.
+2. Afterwards, get the len of the set.
+
+The complexity of step 1 is O(n) (n is the file with the larger number of lines).
+The complexity of step 2 is O(1)
+
+As a result, the run time complexity is O(n).
+
+
+Task2:
+
+The main elementary operations of the algorithm were list below:
+1. Maintain a dict of telephone number to call duration
+2. For each call record, check whether it exist in dict
+3. Insert/update the dict
+
+As the dictionary operations are of complexity O(1), so the complexity depends linearly on the no. of lines in the calls.csv file.
+
+As a result, for task 2, the run time complexity in Big O notation is O(n).
+
+
+Task3 - Part A:
+
+For task 3 part A, we only need to deal with the calls.csv file.
+
+The main elementary operations of the algorithm were list below:
+1. Maintain a list of codes called by Bangalore
+2. For each call, if it's from Bangalore, check the code for the receiver and insert into a list if not exist
+3. Sort the list
+4. Print the list and calculate the percentage
+
+As a result, for task 3 part A, the run time complexity is O(n^2)
+
+Task 3 - Part B:
+
+For task 3 part B, we only need to deal with the calls.csv file.
+
+The main elementary operations of the algorithm were list below:
+1. For each record, update 2 variables if the call/receiver is of Bangalore area code
+
+As a result, for task 3 part B, the run time complexity is O(n)
+
+
+Task4:
+
+The run time depends on the size of the 2 files, texts.csv and calls.csv
+
+The main elementary operations of the algorithm were list below:
+1. Maintain 2 sets for callers and receivers phone number
+2. Loop through each call and text record, and add phone numbers to the 2 sets respectively
+3. Built the telemarketer list base on the 2 sets
+4. Sort the result list
+
+Let n is the larger number of lines in the files.
+
+The complexity in processing the line records if of O(n), while for list sorting is of O(n log n)
+
+As a result, the run time complexity is O(n log n).
